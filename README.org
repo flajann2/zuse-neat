@@ -1,3 +1,21 @@
 * ZuseNEAT
 ** Overview
+   This is a / will be my 2nd implementation of the NEAT Algorithm,
+   and this time it's in C++17. My prior NEAT implementation was in
+   pure Ruby, and was more a proof of concept than anything. ZuseNEAT
+   shall be much more powerful.
+
+   I have much planned here, but no promises. You'll know when the
+   coolness is implemented.
+*** Why Zuse?
+    Konrad Zuse invented the world's first digital computer. This man
+    never got the recognition he deserved. As well, his great work was
+    overshadowed by der Weltkrieg To find out more,
+
+    https://www.quora.com/Who-is-the-greatest-person-that-history-has-forgotten/answer/Fred-Mitchell-5?share=c89046d6&srid=pTaaZ
+
+    Today, we have moved far beyond his humble initial creation, the Z1,
+    which was entirely mechanical. History has almost forgotten him,
+    and so I name this NEAT implementation after him in honer of his
+    accomplishments.
 
