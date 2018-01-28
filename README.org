@@ -35,4 +35,9 @@
 
     Also, the more fluid approach will also make it easier for Critters to compete
     with each other!
-
+*** Overall Layout 
+    | class     |                                                      | Description                                   |   |   |
+    |-----------+------------------------------------------------------+-----------------------------------------------+---+---|
+    | Geneotype | Basic gene                                           |                                               |   |   |
+    | Phenotype | Basic expression of the genotype, AST or vector, etc |                                               |   |   |
+    | Critter   |                                                      | General unit of evolution, the ANN collection |   |   |
