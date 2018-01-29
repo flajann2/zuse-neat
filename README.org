@@ -19,7 +19,9 @@
     and so I name this NEAT implementation after him in honer of his
     accomplishments.
 
-** Design Notes
+** Architectural Notes
+   RAII principles apply.
+
 *** Populations and Fluidity 
     In the prior implementation of NEAT, a "population" was a fixed 
     container of Critters, and all the Critters were rigidly evaluated and 
@@ -36,8 +38,13 @@
     Also, the more fluid approach will also make it easier for Critters to compete
     with each other!
 *** Overall Layout 
-    | class     |                                                      | Description                                   |   |   |
-    |-----------+------------------------------------------------------+-----------------------------------------------+---+---|
-    | Geneotype | Basic gene                                           |                                               |   |   |
-    | Phenotype | Basic expression of the genotype, AST or vector, etc |                                               |   |   |
-    | Critter   |                                                      | General unit of evolution, the ANN collection |   |   |
+    | Class       | Description                                                         |
+    |-------------+---------------------------------------------------------------------|
+    | Geneotype   | Basic gene                                                          |
+    | Phenotype   | Basic expression of the genotype, AST or vector, etc                |
+    | Critter     | General unit of evolution, the ANN collection                       |
+    | Config      | Hyperparameters                                                     |
+    | Coordinator | Fluid mode controller                            |
+    | Reporter    | Reports on progress, performace, etc                                |
+    | Gateway     | Coordinator and Synchronizer to other ZNEAT nodes on other machines |
+    |             |                                                                     |
