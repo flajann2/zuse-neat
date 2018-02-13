@@ -1,8 +1,19 @@
 # ZuseNEAT App
 cmake_minimum_required (VERSION 3.10.0)
+#project (zneat)
 
-project (zneat VERSION 0.0.0 DESCRIPTION "ZuseNEAT App")
+set (CMAKE_C_COMPILER clang)
+set (CMAKE_CXX_COMPILER clang++)
+set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set (CMAKE_CXX_STANDARD_REQUIRED 17)
+set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-add_subdirectory (src)
+include_directories("${PROJECT_BINARY_DIR}")
+include_directories("${PROJECT_INCLUDE_DIR}")
+
+# link_directories(${CMAKE_SOURCE_DIR}/)
+add_executable (zneat src/main.cpp)
+
+#add_subdirectory (src)

@@ -1,42 +1,49 @@
 * ZuseNEAT
 ** Overview
-   This is a / will be my 2nd implementation of the NEAT Algorithm,
-   and this time it's in C++17. My prior NEAT implementation was in
-   pure Ruby, and was more a proof of concept than anything. ZuseNEAT
+   This is a / will be my 2nd implementation of the
+   NEAT Algorithm, and this time it's in C++17. My
+   prior NEAT implementation was in pure Ruby, and was
+   more a proof of concept than anything. ZuseNEAT
    shall be much more powerful.
 
-   I have much planned here, but no promises. You'll know when the
-   coolness is implemented.
+   I have much planned here, but no promises. You'll
+   know when the coolness is implemented.
 *** Why Zuse?
-    Konrad Zuse invented the world's first digital computer. This man
-    never got the recognition he deserved. As well, his great work was
-    overshadowed by der Weltkrieg To find out more,
+    Konrad Zuse invented the world's first digital
+    computer. This man never got the recognition he
+    deserved. As well, his great work was overshadowed
+    by der Weltkrieg To find out more,
 
     https://www.quora.com/Who-is-the-greatest-person-that-history-has-forgotten/answer/Fred-Mitchell-5?share=c89046d6&srid=pTaaZ
 
-    Today, we have moved far beyond his humble initial creation, the Z1,
-    which was entirely mechanical. History has almost forgotten him,
-    and so I name this NEAT implementation after him in honer of his
-    accomplishments.
+    Today, we have moved far beyond his humble initial
+    creation, the Z1, which was entirely
+    mechanical. History has almost forgotten him, and
+    so I name this NEAT implementation after him in
+    honer of his accomplishments.
 
 ** Architectural Notes
    RAII principles apply.
 
 *** Populations and Fluidity 
-    In the prior implementation of NEAT, a "population" was a fixed 
-    container of Critters, and all the Critters were rigidly evaluated and 
-    bred at each iteration.
+    In the prior implementation of NEAT, a "population"
+    was a fixed container of Critters, and all the
+    Critters were rigidly evaluated and bred at each
+    iteration.
 
-    I wish to move away from that and have a more fluid approach, that can
-    and will be more Critter-oriented, and more fluid, and will allow
-    each Critter to be evaluated on its own thread. When it's ready to mate,
-    it will flag a mating mode and then "seek" a potential mate based on
-    the settings of the hyper parameters. It will simply linger until it can
-    find another suitable critter. It could do continuous evaluation, and simply 
-    pause at mating time.
+    I wish to move away from that and have a more fluid
+    approach, that can and will be more
+    Critter-oriented, and more fluid, and will allow
+    each Critter to be evaluated on its own
+    thread. When it's ready to mate, it will flag a
+    mating mode and then "seek" a potential mate based
+    on the settings of the hyper parameters. It will
+    simply linger until it can find another suitable
+    critter. It could do continuous evaluation, and
+    simply pause at mating time.
 
-    Also, the more fluid approach will also make it easier for Critters to compete
-    with each other!
+    Also, the more fluid approach will also make it
+    easier for Critters to compete with each other!
 *** Overall Layout 
     | Class       | Description                                                         |
     |-------------+---------------------------------------------------------------------|
@@ -44,7 +51,12 @@
     | Phenotype   | Basic expression of the genotype, AST or vector, etc                |
     | Critter     | General unit of evolution, the ANN collection                       |
     | Config      | Hyperparameters                                                     |
-    | Coordinator | Fluid mode controller                            |
+    | Coordinator | Fluid mode controller                                               |
     | Reporter    | Reports on progress, performace, etc                                |
     | Gateway     | Coordinator and Synchronizer to other ZNEAT nodes on other machines |
     |             |                                                                     |
+** Building and Installing
+*** Building Requirements
+    We use clang 5 or later to leverage the full C++17 specs,
+    and also so that we can eaisly target multiple environments.
+

@@ -1,5 +1,5 @@
 # Src for ZuseNEAT App
-set (CMAKE_CXX_STANDARD 17)
+
 
 # link_directories(${CMAKE_SOURCE_DIR}/)
 
