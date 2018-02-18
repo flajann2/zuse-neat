@@ -16,4 +16,3 @@ include_directories("${PROJECT_INCLUDE_DIR}")
 # link_directories(${CMAKE_SOURCE_DIR}/)
 add_executable (zneat src/main.cpp)
 
-#add_subdirectory (src)
