@@ -3,6 +3,6 @@
 using namespace std;
 
 int main(int ac, char* av[]) {
-  cout << "hello fucking world" << endl;
+  cout << "Work in progress" << endl;
   return 0;
 }
