@@ -20,5 +20,5 @@ set (CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_subdirectory (app)
 #add_subdirectory (external)
-#add_subdirectory (test)
-#add_subdirectory (examples)
+add_subdirectory (test)
+add_subdirectory (examples)
