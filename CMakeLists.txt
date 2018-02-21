@@ -19,6 +19,6 @@ set (CMAKE_INCLUDE_CURRENT_DIR ON)
 #include_directories("${PROJECT_SOURCE_DIR}")
 
 add_subdirectory (app)
-#add_subdirectory (external)
+add_subdirectory (engine)
 add_subdirectory (test)
 add_subdirectory (examples)
