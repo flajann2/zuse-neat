@@ -11,6 +11,7 @@
       - [[#evaluations-and-gpus][Evaluations and GPUs]]
       - [[#independent-vs-tribal-evolution][Independent vs. Tribal evolution]]
       - [[#hyperneat-allows-us-to-sample-large-vectors-or-matricies][HyperNEAT allows us to sample large vectors or matricies]]
+    - [[#critters-and-the-shared-critter-loader][Critters and the Shared Critter Loader]]
   - [[#building-and-installing][Building and Installing]]
     - [[#building-requirements][Building Requirements]]
 
@@ -156,6 +157,21 @@
      groups of local inputs and process them in a
      fashion. This would allow us to have variable
      scale inputs, in the Enhanced Substrate fashion.
+
+*** Critters and the Shared Critter Loader
+    Critters are generated as shared libraries that are
+    dynamically loaded by shared-critter-loader.
+
+    We need to be able to load Critters (as shared
+    libraries) dymacally. The functions in the shared
+    library can be called directly. See the docs in the
+    URL below.
+ 
+    The underlying C interfaces are dladdr(), dlclose(),
+    dlerror(), dlopen(), dlsym(), dlvsym(). All is
+    described at:
+ 
+    https://linux.die.net/man/3/dlopen
 
 ** Building and Installing
 *** Building Requirements
