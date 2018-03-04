@@ -7,6 +7,7 @@
 #include <cstddef>
 #include <iostream>
 #include <atomic>
+#include <type_traits>
 
 namespace neat {
   /* All NEAT type objects derive from this class.
