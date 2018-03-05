@@ -1,19 +1,20 @@
 #include "neat.h"
 #include "gtest/gtest.h"
 
+using namespace std;
 namespace
 {
-  // The fixture for testing class Foo.
-  class FooTest : public ::testing::Test {
+  // The fixture for testing the innovation counter.
+  class InnovationTest : public ::testing::Test {
   protected:
     // You can remove any or all of the following functions if its body
     // is empty.
     
-    FooTest() {
+    InnovationTest() {
       // You can do set-up work for each test here.
     }
     
-    virtual ~FooTest() {
+    virtual ~InnovationTest() {
       // You can do clean-up work that doesn't throw exceptions here.
     }
     
@@ -33,17 +34,11 @@ namespace
     // Objects declared here can be used by all tests in the test case for Foo.
   };
   
-  // Tests that the Foo::Bar() method does Abc.
-  TEST_F(FooTest, MethodBarDoesAbc) {
-    const string input_filepath = "this/package/testdata/myinputfile.dat";
-    const string output_filepath = "this/package/testdata/myoutputfile.dat";
-    Foo f;
-    EXPECT_EQ(0, f.Bar(input_filepath, output_filepath));
-  }
-  
   // Tests that Foo does Xyz.
-  TEST_F(FooTest, DoesXyz) {
-    // Exercises the Xyz feature of Foo.
+  TEST_F(InnovationTest, DoesIncrement) {
+    auto a = neat::innovation();
+    auto b = neat::innovation();
+    EXPECT_EQ(1, b - a);
   } 
 }
 
