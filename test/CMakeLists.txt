@@ -18,5 +18,5 @@ set_property(
 
 target_link_libraries(zneat-test
   zuseneat
-  test
-  test_main)
+  gtest
+  gtest_main)
