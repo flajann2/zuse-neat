@@ -14,7 +14,7 @@
     - [[#critters-and-the-shared-critter-loader][Critters and the Shared Critter Loader]]
   - [[#building-and-installing][Building and Installing]]
     - [[#building-requirements][Building Requirements]]
-    - [[#build-notes-scratchpad-please-ignore][Build Notes (scratchpad, please ignore)]]
+    - [[#how-to-build][How to build]]
 
 ** Overview
    This is a / will be my 2nd implementation of the
@@ -176,75 +176,32 @@
 
 ** Building and Installing
 *** Building Requirements
-    We use clang 5 or later to leverage the full C++17 specs,
-    and also so that we can eaisly target multiple environments.
+    We use clang 5 or later to leverage the full C++17
+    specs, and also so that we can eaisly target
+    multiple environments.
 
-*** Build Notes (scratchpad, please ignore)
-    Output from googletest install, we may remove this.
--- Install configuration: ""
--- Installing: /usr/local/lib/libgmock.a
--- Installing: /usr/local/lib/libgmock_main.a
--- Installing: /usr/local/include/gmock
--- Installing: /usr/local/include/gmock/gmock-generated-matchers.h
--- Installing: /usr/local/include/gmock/gmock-more-matchers.h
--- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h
--- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h.pump
--- Installing: /usr/local/include/gmock/gmock-spec-builders.h
--- Installing: /usr/local/include/gmock/internal
--- Installing: /usr/local/include/gmock/internal/custom
--- Installing: /usr/local/include/gmock/internal/custom/gmock-port.h
--- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h.pump
--- Installing: /usr/local/include/gmock/internal/custom/gmock-matchers.h
--- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h
--- Installing: /usr/local/include/gmock/internal/gmock-internal-utils.h
--- Installing: /usr/local/include/gmock/internal/gmock-port.h
--- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h.pump
--- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h
--- Installing: /usr/local/include/gmock/gmock-cardinalities.h
--- Installing: /usr/local/include/gmock/gmock-actions.h
--- Installing: /usr/local/include/gmock/gmock-generated-actions.h.pump
--- Installing: /usr/local/include/gmock/gmock.h
--- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h
--- Installing: /usr/local/include/gmock/gmock-matchers.h
--- Installing: /usr/local/include/gmock/gmock-generated-actions.h
--- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h.pump
--- Installing: /usr/local/include/gmock/gmock-more-actions.h
--- Installing: /usr/local/include/gmock/gmock-generated-matchers.h.pump
--- Installing: /usr/local/lib/pkgconfig/gmock.pc
--- Installing: /usr/local/lib/pkgconfig/gmock_main.pc
--- Installing: /usr/local/lib/libgtest.a
--- Installing: /usr/local/lib/libgtest_main.a
--- Installing: /usr/local/include/gtest
--- Installing: /usr/local/include/gtest/gtest_prod.h
--- Installing: /usr/local/include/gtest/gtest-test-part.h
--- Installing: /usr/local/include/gtest/gtest.h
--- Installing: /usr/local/include/gtest/gtest-printers.h
--- Installing: /usr/local/include/gtest/gtest-spi.h
--- Installing: /usr/local/include/gtest/gtest_pred_impl.h
--- Installing: /usr/local/include/gtest/gtest-typed-test.h
--- Installing: /usr/local/include/gtest/gtest-param-test.h.pump
--- Installing: /usr/local/include/gtest/internal
--- Installing: /usr/local/include/gtest/internal/custom
--- Installing: /usr/local/include/gtest/internal/custom/gtest-port.h
--- Installing: /usr/local/include/gtest/internal/custom/gtest.h
--- Installing: /usr/local/include/gtest/internal/custom/gtest-printers.h
--- Installing: /usr/local/include/gtest/internal/gtest-port.h
--- Installing: /usr/local/include/gtest/internal/gtest-param-util.h
--- Installing: /usr/local/include/gtest/internal/gtest-tuple.h
--- Installing: /usr/local/include/gtest/internal/gtest-internal.h
--- Installing: /usr/local/include/gtest/internal/gtest-port-arch.h
--- Installing: /usr/local/include/gtest/internal/gtest-filepath.h
--- Installing: /usr/local/include/gtest/internal/gtest-tuple.h.pump
--- Installing: /usr/local/include/gtest/internal/gtest-death-test-internal.h
--- Installing: /usr/local/include/gtest/internal/gtest-string.h
--- Installing: /usr/local/include/gtest/internal/gtest-type-util.h
--- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
--- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h
--- Installing: /usr/local/include/gtest/internal/gtest-linked_ptr.h
--- Installing: /usr/local/include/gtest/internal/gtest-type-util.h.pump
--- Installing: /usr/local/include/gtest/gtest-param-test.h
--- Installing: /usr/local/include/gtest/gtest-death-test.h
--- Installing: /usr/local/include/gtest/gtest-message.h
--- Installing: /usr/local/lib/pkgconfig/gtest.pc
--- Installing: /usr/local/lib/pkgconfig/gtest_main.pc
+    We also are using googletest to run our unit tests
+    and the like.
 
+    When built, all executables will be in the root of
+    the build directory.
+
+*** How to build
+    To build this project (usung Ninja):
+
+    #+begin_src bash
+    mkdir build
+    cd build && cmake -GNinja .. && ninja -k3 -j8
+    #+end_src
+
+    Feel free to adjust the "-j8" parameter to reflect
+    the number of cores on your build system. You can
+    also leave off the "-GNinja" flag if you wish to
+    use make instead.
+
+    So, a "no frills" build would look like:
+
+    #+begin_src bash
+    mkdir build
+    cd build && cmake .. && make
+    #+end_src
