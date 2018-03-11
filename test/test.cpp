@@ -1,5 +1,6 @@
 #include "neat.h"
 #include "gtest/gtest.h"
+#include <cwrap>
 
 using namespace std;
 namespace

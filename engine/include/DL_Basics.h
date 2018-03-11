@@ -1,6 +1,7 @@
 #pragma once
 #include "neat.h"
 #include <dlfcn.h>
+#include <cwrap>
 
 /* DynamicLibrary Basics
  * For the extensive docs, see the main README.org

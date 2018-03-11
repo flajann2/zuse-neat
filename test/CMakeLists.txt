@@ -8,6 +8,7 @@ set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
 
 include_directories(
   ${CMAKE_SOURCE_DIR}/engine/include
+  ${CMAKE_SOURCE_DIR}/external/cwrap/include
   )
 
 set_property(

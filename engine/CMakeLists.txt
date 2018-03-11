@@ -7,6 +7,7 @@ set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 include_directories(
   ${PROJECT_BINARY_DIR}
   ${PROJECT_INCLUDE_DIR}
+  ${CMAKE_SOURCE_DIR}/external/cwrap/include
   )
 
 # link_directories(${CMAKE_SOURCE_DIR}/)
