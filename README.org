@@ -15,6 +15,7 @@
   - [[#building-and-installing][Building and Installing]]
     - [[#building-requirements][Building Requirements]]
     - [[#how-to-build][How to build]]
+  - [[#to-jupiter-and-beyond-the-infinite][To Jupiter and beyond the Infinite]]
 
 ** Overview
    This is a / will be my 2nd implementation of the
@@ -205,3 +206,15 @@
     mkdir build
     cd build && cmake .. && make
     #+end_src
+** To Jupiter and beyond the Infinite
+   ZuseNEAT is just the first step in a number of steps I have in mind
+   to create AGI. I have envisioned how to bring it about. My idea is
+   at once beautiful and elegant, yet terrifying. It will be both
+   easy and difficult. BUT, nature has already done it the first time.
+   I will be simply taking the basic priciples of nature and extending
+   them in a way that will allow up to propel forward beyond anyone's 
+   wildest dreams.
+
+   It's all in the genes. It is all in the genes. The clue is there.
+   Just not the one everyone expects or would look for.
+

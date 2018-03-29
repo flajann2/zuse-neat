@@ -16,7 +16,7 @@ set (LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-include_directories(
+target_include_directories(
   ${PROJECT_INCLUDE_DIR}
   ${PROJECT_SOURCE_DIR}
   )
