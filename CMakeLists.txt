@@ -6,7 +6,7 @@ set (CMAKE_CXX_COMPILER /usr/bin/clang++)
 
 project (ZuseNEAT VERSION 0.0.0 DESCRIPTION "ZuseNEAT -- Neural Evolution of Augmenting Topologies")
 
-set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 2a)
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set (CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)

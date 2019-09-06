@@ -1,6 +1,9 @@
 * ZuseNEAT                                                         :TOC_5_gh:
   - [[#overview][Overview]]
     - [[#why-zuse][Why Zuse?]]
+    - [[#why-c20][Why C++20?]]
+    - [[#why-clang][Why Clang?]]
+    - [[#port-from-rubyneat-et-al][Port from RubyNEAT, et al]]
   - [[#architectural-notes][Architectural Notes]]
     - [[#populations-and-fluidity][Populations and Fluidity]]
     - [[#overall-layout][Overall Layout]]
@@ -16,10 +19,11 @@
     - [[#building-requirements][Building Requirements]]
     - [[#how-to-build][How to build]]
   - [[#to-jupiter-and-beyond-the-infinite][To Jupiter and beyond the Infinite]]
+    - [[#numenta][Numenta]]
 
 ** Overview
    This is a / will be my 2nd implementation of the
-   NEAT Algorithm, and this time it's in C++17. My
+   NEAT Algorithm, and this time it's in C++20. My
    prior NEAT implementation was in pure Ruby, and was
    more a proof of concept than anything. ZuseNEAT
    shall be much more powerful.
@@ -40,8 +44,39 @@
     so I name this NEAT implementation after him in
     honer of his accomplishments.
 
+*** Why C++20?
+    There are many cutting-edge features in C++20, and one may as well
+    get started with them. For sure, at the time of this writing, not all
+    features are in place, and there may be some small revisions.  But, with
+    the way I see it, by the time this project is completed, most of the
+    features will be in place in C++20 anyway.
+
+*** Why Clang?
+    We are leveraging clang primarily for its support for both the
+    GPU and for LLVM. While it would be possible to do both from gcc,
+    we think it would simply be easier to do in clang.
+
+    Later, we want to be compiler-agnostic, perhaps disabling clang-specific
+    features as an option. Or support both clang and gcc. We'll see as this 
+    progresses.
+
+*** Port from RubyNEAT, et al
+    RubyNEAT is basically a "proof of concept", to see how NEAT works
+    and to become intimately familiar with the algorithm. Now that I am,
+    it is time to get serious and do it in a "real man's language".
+
+    To honor its humble begininngs, RubyNEAT will live on as a wrapper
+    for ZuseNEAT. Python support is also planned, as it is the 500kg
+    gorilla in the room when it comes to data science and machine learning.
+
+    A plugin for TensorFlow is also a possibility. But one thing at a time...
+
 ** Architectural Notes
-   RAII principles apply.
+   RAII and SOLID principles apply, where they make sense.
+   I want this to be easily maintainable and understandable
+   by others -- to encourage pull requests! For once this
+   is begun, I anticipate that this will grow to become a 
+   multi-person effort.
 
 *** Populations and Fluidity 
     In the prior implementation of NEAT, a "population"
@@ -207,7 +242,7 @@
     cd build && cmake .. && make
     #+end_src
 ** To Jupiter and beyond the Infinite
-   ZuseNEAT is just the first step in a number of steps I have in mind
+   ZuseNEAT is just the first tiny baby step in a number of steps I have in mind
    to create AGI. I have envisioned how to bring it about. My idea is
    at once beautiful and elegant, yet terrifying. It will be both
    easy and difficult. BUT, nature has already done it the first time.
@@ -217,4 +252,9 @@
 
    It's all in the genes. It is all in the genes. The clue is there.
    Just not the one everyone expects or would look for.
+
+*** Numenta
+    New capabilities are planned for ZuseNEAT in the future,
+    inspired by the research being done at Numenta.
+    https://numenta.com/
 
