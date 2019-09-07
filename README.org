@@ -20,6 +20,7 @@
     - [[#how-to-build][How to build]]
   - [[#to-jupiter-and-beyond-the-infinite][To Jupiter and beyond the Infinite]]
     - [[#numenta][Numenta]]
+      - [[#htm-encoding-sparsity-and-spatial-pooling][HTM, Encoding, Sparsity, and Spatial Pooling]]
 
 ** Overview
    This is a / will be my 2nd implementation of the
@@ -257,4 +258,9 @@
     New capabilities are planned for ZuseNEAT in the future,
     inspired by the research being done at Numenta.
     https://numenta.com/
+
+**** HTM, Encoding, Sparsity, and Spatial Pooling
+     Some thought will be given to how to incorporate HTM theory into
+     ZuseNEAT. What implications does this have for ES Interated HyperNEAT?
+     We don't know yet.
 
