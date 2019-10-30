@@ -21,6 +21,9 @@
   - [[#to-jupiter-and-beyond-the-infinite][To Jupiter and beyond the Infinite]]
     - [[#numenta][Numenta]]
       - [[#htm-encoding-sparsity-and-spatial-pooling][HTM, Encoding, Sparsity, and Spatial Pooling]]
+      - [[#pyramidial-neurons][Pyramidial Neurons]]
+      - [[#neocortex-columns][Neocortex Columns]]
+        - [[#htm-like-evolution-to-colums][HTM-like evolution to colums]]
 
 ** Overview
    This is a / will be my 2nd implementation of the
@@ -264,3 +267,33 @@
      ZuseNEAT. What implications does this have for ES Interated HyperNEAT?
      We don't know yet.
 
+**** Pyramidial Neurons
+     We can have a sort of Pyramidial neurons with distal
+     and proximal dentries. How this works is simple. The 
+     neuron will have its internal shift register, which will
+     be shift once per iteration. It starts off at zero, and
+     can be moved to be more negative or positive via the
+     influnence of the distal connections.
+
+     The activation function would be the same, but the 
+     polarization would take part in the normal activation,
+     causing it to activat more quickly if positively poalrized,
+     and less if negatively polarized.
+
+     There would be a specific decay rate for this shift register,
+     which would be exponential decay. How do we determine that 
+     rate? That in an of itself could possibly be evolved.
+
+**** Neocortex Columns
+     I don't know how this will work yet, but we could have a set 
+     of neurons "replicated" across a "neocortex sheet". Not sure what
+     this would entail, but will have to think about it.
+
+     Colums would have connectivity to other columns, and the entire
+     business would be evolved together over time to refine the connections.
+     That is to say, we may have to employ a HTM-like evolution to it.
+
+***** HTM-like evolution to colums
+      This is another issue which we will need to look at closely.
+      Replicating the columns, with some area of variation. Not
+      sure how this would work either.
