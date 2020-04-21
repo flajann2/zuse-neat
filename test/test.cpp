@@ -1,4 +1,4 @@
-#include "neat.h"
+import neat;
 #include "gtest/gtest.h"
 #include <cwrap>
 

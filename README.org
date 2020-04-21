@@ -19,6 +19,7 @@
     - [[#building-requirements][Building Requirements]]
     - [[#how-to-build][How to build]]
   - [[#to-jupiter-and-beyond-the-infinite][To Jupiter and beyond the Infinite]]
+    - [[#design-considerations][Design Considerations]]
     - [[#numenta][Numenta]]
       - [[#htm-encoding-sparsity-and-spatial-pooling][HTM, Encoding, Sparsity, and Spatial Pooling]]
       - [[#pyramidial-neurons][Pyramidial Neurons]]
@@ -257,6 +258,20 @@
    It's all in the genes. It is all in the genes. The clue is there.
    Just not the one everyone expects or would look for.
 
+*** Design Considerations
+    We are making ZuseNEAT completely based on C++20,
+    leveraging all the features and ability this new
+    C++ has to offer. 
+
+    As such, we will be using modules, and eliminate
+    all header files. We will also facilitate
+    a C++20 interation with this, and eventually
+    provide some means of interaction with C++17 and
+    other languages.
+
+    I am convinced that C++20 is definitely the way to
+    go with this. The rest of the world will eventually
+    catch up.
 *** Numenta
     New capabilities are planned for ZuseNEAT in the future,
     inspired by the research being done at Numenta.

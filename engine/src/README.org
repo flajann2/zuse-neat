@@ -1,0 +1,7 @@
+* This constitutes the C++20 module for NEAT
+  This is a game-changer, doing this in C++20.
+  All former notions of how we were going to do this
+  is now history.
+
+  Stay tuned.
+

@@ -1,0 +1,7 @@
+* All things here are deprecated.
+  As we are doing this in C++20, we 
+  have made a firm commitment to do away with
+  the header files. We leave these here
+  for reference (not that there's much in them!!!)
+  and will later remove.
+

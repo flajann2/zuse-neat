@@ -1,12 +1,12 @@
 # Main project
-cmake_minimum_required (VERSION 3.10.0)
+cmake_minimum_required (VERSION 3.17.1)
 
 set (CMAKE_C_COMPILER /usr/bin/clang)
 set (CMAKE_CXX_COMPILER /usr/bin/clang++)
 
 project (ZuseNEAT VERSION 0.0.0 DESCRIPTION "ZuseNEAT -- Neural Evolution of Augmenting Topologies")
 
-set (CMAKE_CXX_STANDARD 2a)
+set (CMAKE_CXX_STANDARD 20)
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set (CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
