@@ -1,0 +1,29 @@
+# ~/.tmuxinator.yml
+
+name: zuse-neat-c++
+root: /development/neat/cpp/zuse-neat
+#on_project_first_start: loadxrdb
+
+startup_window: neat
+
+windows:
+  - neat:
+      layout: ed89,274x88,0,0{90x88,0,0,332,90x88,91,0[90x44,91,0,340,90x43,91,45,355],92x88,182,0[92x31,182,0,341,92x29,182,32,342,92x26,182,62,343]}
+      panes:
+        - coolprompt
+        - note:
+            - git status -sb
+            - coolprompt
+        - coolprompt
+        - coolprompt
+        - coolprompt
+        - coolprompt
+  - test:
+      layout: ed89,274x88,0,0{90x88,0,0,332,90x88,91,0[90x44,91,0,340,90x43,91,45,355],92x88,182,0[92x31,182,0,341,92x29,182,32,342,92x26,182,62,343]}
+      panes:
+        - coolprompt
+        - coolprompt
+        - coolprompt
+        - coolprompt
+        - coolprompt
+        - coolprompt
